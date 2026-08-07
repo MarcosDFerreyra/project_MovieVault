@@ -1,0 +1,41 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+.nav-link{
+    color: white;
+}
+
+.navbar-brand{
+ color: white;
+}
+footer, header{
+    background-color: rgb(47, 47, 47);
+}
+
+.popular_movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.pop_movies {
+    flex: 0 0 calc(20% - 1.5rem);
+}
+
+.popular_movies div img{
+    border-radius: 1rem;
+
+}
+
+.pop_movies img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.pop_movies img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 18px rgba(138, 43, 226, 0.6);
+}
