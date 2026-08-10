@@ -6,7 +6,8 @@ export async function fetch_movie(url) {
         headers: {
             Authorization: `Bearer ${token}`
         }
-    })
-    let data = await response.json()
-    return data
+    });
+    let data = await response.json();
+
+    return data.results ?? data;
 }
