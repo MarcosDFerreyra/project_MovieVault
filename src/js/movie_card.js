@@ -1,5 +1,9 @@
 
-export function movieCards(movies, card_place) {
+
+
+
+export function movieCards(movies, data, card_place) {
+    const rotten = data.Ratings.find(rating => rating.Source === "Rotten Tomatoes");
     let html = "";
     movies.forEach(movie => {
         html +=
@@ -23,7 +27,11 @@ export function movieCards(movies, card_place) {
         <p>${movie.overview}</p>
 
         <div class="movie_stats">
-            <p><strong>Votes:</strong> ${movie.vote_count}</p>
+            <h3><strong>All Ratings:</strong></h3>
+            <p><strong>TMDB:</strong> ⭐ ${movie.vote_average.toFixed(1)}/10</p>
+            <p><strong>IMDb:</strong> ⭐ ${data.imdbRating}/10</p>
+            <p><strong>Metascore:</strong> ⭐ ${data.Metascore}/100</p>
+            ${rotten ? `<p><strong>Rotten Tomatoes:</strong> ⭐ ${rotten.Value}</p>` : ""}
         </div>
     </div>`
 
