@@ -1,9 +1,12 @@
 
-
+import {getMovieId, isFavorite, getFavorite } from "./utils.js";
 
 
 export function movieCards(movies, data, card_place) {
     const rotten = data.Ratings.find(rating => rating.Source === "Rotten Tomatoes");
+    const fave = getFavorite();
+    const id = getMovieId();
+    const value = isFavorite(fave, id)
     let html = "";
     movies.forEach(movie => {
         html +=
@@ -21,6 +24,12 @@ export function movieCards(movies, data, card_place) {
             <span>📅 ${movie.release_date}</span>
             <span>⏱️ ${movie.runtime} min</span>
             <span>🌎 ${movie.original_language.toUpperCase()}</span>
+            ${value ?
+            `<button id="favorites">Remove from Favorites</button>`
+            :
+            `<button id="favorites">Add to Favorites</button>`
+}
+            
         </div>
 
         <h3>Overview</h3>
