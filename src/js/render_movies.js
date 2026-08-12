@@ -1,14 +1,24 @@
-
-
 export async function renderMovies(movies, card_place) {
-    //const data = await fetch_movie(url);
-    //const pop_movies = data.results;
     let html = "";
+
     movies.forEach(movie => {
-        html +=
-        `<div class = "movie" >
-        <a href="/src/cards/cards.html?id=${movie.id}"><img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}"></a>
-        </div>`
+
+        const poster = movie.poster_path
+            ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+            : `/images/poster.png`;
+
+        html += `
+            <div class="movie">
+                <a href="/src/cards/cards.html?id=${movie.id}&title=${encodeURIComponent(movie.title)}">
+                    <img 
+                        src="${poster}" 
+                        alt="${movie.title}"
+                        onerror="this.src='/images/poster.png'"
+                    >
+                </a>
+            </div>
+        `;
     });
+
     card_place.innerHTML = html;
 }

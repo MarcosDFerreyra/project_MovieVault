@@ -11,6 +11,12 @@ export function getMovieQuery() {
     return query;
 }
 
+export function getMovieTitle() {
+    const params = new URLSearchParams(window.location.search);
+    const title = params.get("title");
+    return title;
+}
+
 export function getFavorite() {
     const fave = JSON.parse(localStorage.getItem("favorites")) || [];
     return fave;
