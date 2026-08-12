@@ -8,7 +8,7 @@ export default defineConfig({
                 main: fileURLToPath(new URL('./index.html', import.meta.url)),
                 cards: fileURLToPath(new URL('./src/cards/cards.html', import.meta.url)),
                 search: fileURLToPath(new URL('./src/search/search.html', import.meta.url)),
-                search: fileURLToPath(new URL('./src/favorites/favorites.html', import.meta.url))
+                favorites: fileURLToPath(new URL('./src/favorites/favorites.html', import.meta.url))
             }
         }
     }
