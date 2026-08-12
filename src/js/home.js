@@ -1,4 +1,4 @@
-import { renderMovies } from './cards_popular.js';
+import { renderMovies } from './render_movies.js';
 import { fetch_movie } from './apis.js';
 
 const card_popular = document.querySelector("#popular_movies");
@@ -21,7 +21,7 @@ form.addEventListener('submit', (event) => {
     const query = input.value.trim();
 
     if (query) {
-        window.location.href = `http://localhost:5173/src/search/search.html?query=${encodeURIComponent(query)}`
+        window.location.href = `/src/search/search.html?query=${encodeURIComponent(query)}`
     }
 });
 

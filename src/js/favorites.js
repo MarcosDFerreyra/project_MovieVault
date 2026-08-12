@@ -1,4 +1,4 @@
-import { renderMovies } from './cards_popular.js';
+import { renderMovies } from './render_movies.js';
 import { fetch_movie } from './apis.js';
 import { getFavorite } from './utils.js';
 

@@ -1,3 +1,4 @@
+
 body{
     background-color: black;
     color: white;
@@ -5,37 +6,122 @@ body{
 
 .nav-link{
     color: white;
+    font-size: 1.2rem;
+}
+
+.nav-link a:hover{
+    color: gold;
 }
 
 .navbar-brand{
- color: white;
+    color: white;
+    font-size: 1.5rem;
 }
-footer, header{
+footer{
     background-color: rgb(47, 47, 47);
-}
+    min-height: 100px;
 
-.popular_movies {
+}
+footer div{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem;
+    text-align: center;
+}
+footer div p{
+    text-align: center;
 }
 
-.pop_movies {
-    flex: 0 0 calc(20% - 1.5rem);
+main {
+    margin: 0px 0px 40px 0px ;
 }
 
-.popular_movies div img{
+
+
+
+.peli {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.2rem;
+}
+
+
+.movie img{
     border-radius: 1rem;
-
+    width: 150px;
 }
 
-.pop_movies img {
+.movie img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
 
-.pop_movies img:hover {
+.movie img:hover {
     transform: scale(1.08);
-    box-shadow: 0 0 18px rgba(138, 43, 226, 0.6);
 }
+
+
+/**************** HOME *******************/
+.introduction{
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+.introduction h1{
+    text-align: center;
+}
+
+.introduction p{
+    
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 800px;
+}
+
+
+.introduction img{
+    max-height: 300px;
+    max-width: 430px;
+}
+
+.search_section{
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+.search_section h3{
+    color: rgb(255, 195, 75);
+}
+
+
+.search_section input{
+    background: transparent;
+    border: 1px solid rgb(255, 195, 75);
+    width: 400px;
+    color: white;
+}
+
+.search_section button{
+    border-radius: 0.5rem;
+    background-color:rgb(255, 195, 75); 
+    border: none;
+
+}
+
+/**************** HOME *******************/
+
+/**************** CARD *******************/
+/**************** CARD *******************/
+
+
+
+/**************** RESEARCH *******************/
+
+/**************** RESEARCH *******************/
+
+
+/**************** FAVORITES *******************/
+/**************** FAVORITES *******************/
